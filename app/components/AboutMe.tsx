@@ -1,19 +1,15 @@
-import react from 'react'
-import { div } from 'three/tsl'
-import { Image } from '@react-three/drei'
 import '@/public/styling/style.css'
 
-export default function AboutMe({onClose}) {
+type AboutMeProps = {
+    onClose: () => void
+}
+
+export default function AboutMe({ onClose }: AboutMeProps) {
     return (
-        
         <div
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/60"
             onClick={onClose}
         >
-            <style>
-                @import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
-            </style>
-
             <div
                 className="relative w-full max-w-4xl rounded-2xl bg-white p-8 text-black"
                 onClick={(e) => e.stopPropagation()}
@@ -37,7 +33,8 @@ export default function AboutMe({onClose}) {
                         <div className="flex flex-row pb-10">
                             {/* Photo of me */}
                             <div className="w-1/2 flex justify-center items-center pr-14">
-                                <img source="" alt="FaceImage" className="pictureIcon"/>
+                                {/* Put your photo in public/ and set src, e.g. src="/me.jpg" */}
+                                <img src={undefined} alt="Photo of Matthew" className="pictureIcon"/>
                             </div>
                             {/* Quick descirption */}
                             <div className="w-1/2">

@@ -1,8 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import AboutMe from "@/public/Component/Aboutme";
-import Link from "next/link";
+import AboutMe from "@/app/components/AboutMe";
 
 export default function Home() {
   const [openState, setOpenState] = useState(false);
@@ -61,7 +60,7 @@ export default function Home() {
             Deploy Now
           </a>
           <button onClick={()=>setOpenState(true)} className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]">About me</button>
-          {openState && <AboutMe onClose={()=>setOpenState(false)} />};
+          {openState && <AboutMe onClose={()=>setOpenState(false)} />}
         </div>
       </main>
     </div>
