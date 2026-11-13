@@ -1,7 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
 
 .LimelightFont {
     font-family: "Limelight", sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+
+.GlutenFont {
+  font-family: "Gluten", cursive;
+  font-optical-sizing: auto;
+  /* Change per element: style={{ "--font-weight": 800 }} (100–900) */
+  font-weight: var(--font-weight, 600);
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
+.baloo-2Font {
+  font-family: "Baloo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight, 400);
+  font-style: normal;
+}
+
+.dynamicSize {
+    font-size: var(--font-size, 1rem);
+}
+
+.AboutMeModalContainer {
+    width: 100%
+}
+
+.goBackbutton {
+    width: 13rem;
+    height: 3rem;
+    /* border: black 3px solid; */
+    border-radius: 15px;
+
+    font-size: 1rem;
+
+    justify-content: center;
+    gap: 10px;
+}
+
+.goBackbutton:hover {
+    background-color: #FDDA0D;
+}
+
+.pictureIcon {
+    border-radius: 50%;
+    border: 1px solid black;
+
+    height: 15rem;
+    width: 15rem;
 }

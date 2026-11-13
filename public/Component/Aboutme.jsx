@@ -1,5 +1,6 @@
 import react from 'react'
 import { div } from 'three/tsl'
+import { Image } from '@react-three/drei'
 import '@/public/styling/style.css'
 
 export default function AboutMe({onClose}) {
@@ -14,21 +15,65 @@ export default function AboutMe({onClose}) {
             </style>
 
             <div
-                className="relative w-full max-w-lg rounded-2xl bg-white p-8 text-black"
+                className="relative w-full max-w-4xl rounded-2xl bg-white p-8 text-black"
                 onClick={(e) => e.stopPropagation()}
             >
-                {/* <button onClick={onClose} className="absolute right-4 top-4 text-xl">
-                Back to the table
-                </button>
-                <h2 className="mb-4 text-2xl font-bold">About Me</h2> */}
-
-                <div className="flex">
-                    <div className="flex .flex-row">
-                        <p className="LimelightFont">10</p>
-                        
+                <div className="border-3 border-dashed border-slate-300 rounded-xl p-6">
+                    <div className="AboutMeModalContainer flex flex-row justify-between items-start">
+                        <div className="flex flex-col items-center">
+                            <p className="GlutenFont dynamicSize" style={{ "--font-size": "3rem" }}>10</p>
+                            <img src="/suits/spade.png" alt="Spade" width={48} height={48}/>
+                        </div>
+                        <div className="goBackbutton flex flex-row items-center border-black border-t-2 border-l-2 border-r-5 border-b-5">
+                            <img src="/arrow.png" alt="LeftArrow" width={10} height={10}/>
+                            <p className="baloo-2Font">Back to the table</p>
+                        </div>
+                    </div>
+                    {/* Profile container */}
+                    <div>
+                        <div className="GlutenFont dynamicSize pt-10" style={{ "--font-size": "4rem", "--font-weight": "800"}}>
+                            <p>About me</p>
+                        </div>
+                        <div className="flex flex-row pb-10">
+                            {/* Photo of me */}
+                            <div className="w-1/2 flex justify-center items-center pr-14">
+                                <img source="" alt="FaceImage" className="pictureIcon"/>
+                            </div>
+                            {/* Quick descirption */}
+                            <div className="w-1/2">
+                                <p className="baloo-2Font dynamicSize" style={{"--font-size": "1.5rem", "--font-weight": "600"}}>I'm Matthew, a 2023-year computer science student at RMIT Univeristy</p>
+                                <p className="text-gray-500">I'm happiest writing C++ where every millisecond counts, and I enjoy problems that need an unconventional idea to crack. Open to graduate software roles from 2027.</p>
+                            </div>
+                        </div>
+                        {/* Personal info */}
+                        <div className="flex flex-row">
+                            {/* Based in */}
+                            <div className="w-1/3 justify-center items-center">
+                                <hr className="w-9/10 mx-auto border-2 border-dashed border-slate-300"/>
+                                <div className="w-9/10 mx-auto flex flex-col pt-3">
+                                    <p className="baloo-2Font dynamicSize text-gray-600" style={{"--font-weight": "500", "--font-size": "1.2rem"}}>Based in</p>
+                                    <p className="baloo-2Font dynamicSize" style={{"--font-weight": "600" ,"--font-size":"1.2rem"}}>Melbourne, Australia</p>
+                                </div>
+                            </div>
+                            {/* Languages */}
+                            <div className="w-1/3 justify-center items-center">
+                                <hr className="w-9/10 mx-auto border-2 border-dashed border-slate-300"/>
+                                <div className="w-9/10 mx-auto pt-3">
+                                    <p className="baloo-2Font dynamicSize text-gray-600" style={{"--font-weight": "500", "--font-size": "1.2rem"}}>Languages</p>
+                                    <p className="baloo-2Font dynamicSize" style={{"--font-weight": "600" ,"--font-size":"1.2rem"}}>English, Japanese</p>
+                                </div>
+                            </div>
+                            {/* Job what we looking for*/}
+                            <div className="w-1/3 justify-center items-center">
+                                <hr className="w-9/10 mx-auto border-2 border-dashed border-slate-300"/>
+                                <div className="w-9/10 mx-auto pt-3">
+                                    <p className="baloo-2Font dynamicSize text-gray-600" style={{"--font-weight": "500", "--font-size": "1.2rem"}}>Looking For</p>
+                                    <p className="baloo-2Font dynamicSize" style={{"--font-weight": "600" ,"--font-size":"1.2rem"}}>Software Development from 2027</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p>Your text here...</p>
             </div>
     </div>
     )
