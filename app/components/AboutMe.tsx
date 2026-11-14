@@ -14,7 +14,7 @@ export default function AboutMe({ onClose }: AboutMeProps) {
                 className="relative w-full max-w-4xl rounded-2xl bg-white p-8 text-black"
                 onClick={(e) => e.stopPropagation()}
             >
-                <div className="border-3 border-dashed border-slate-300 rounded-xl p-6">
+                <div className="border-2 border-dashed border-slate-300 rounded-xl p-6">
                     <div className="AboutMeModalContainer flex flex-row justify-between items-start">
                         <div className="flex flex-col items-center">
                             <p className="GlutenFont dynamicSize" style={{ "--font-size": "3rem" }}>10</p>
@@ -46,7 +46,7 @@ export default function AboutMe({ onClose }: AboutMeProps) {
                         <div className="flex flex-row">
                             {/* Based in */}
                             <div className="w-1/3 justify-center items-center">
-                                <hr className="w-9/10 mx-auto border-2 border-dashed border-slate-300"/>
+                                <hr className="w-9/10 mx-auto border-t-2 border-dashed border-slate-300"/>
                                 <div className="w-9/10 mx-auto flex flex-col pt-3">
                                     <p className="baloo-2Font dynamicSize text-gray-600" style={{"--font-weight": "500", "--font-size": "1.2rem"}}>Based in</p>
                                     <p className="baloo-2Font dynamicSize" style={{"--font-weight": "600" ,"--font-size":"1.2rem"}}>Melbourne, Australia</p>
@@ -54,7 +54,7 @@ export default function AboutMe({ onClose }: AboutMeProps) {
                             </div>
                             {/* Languages */}
                             <div className="w-1/3 justify-center items-center">
-                                <hr className="w-9/10 mx-auto border-2 border-dashed border-slate-300"/>
+                                <hr className="w-9/10 mx-auto border-t-2 border-dashed border-slate-300"/>
                                 <div className="w-9/10 mx-auto pt-3">
                                     <p className="baloo-2Font dynamicSize text-gray-600" style={{"--font-weight": "500", "--font-size": "1.2rem"}}>Languages</p>
                                     <p className="baloo-2Font dynamicSize" style={{"--font-weight": "600" ,"--font-size":"1.2rem"}}>English, Japanese</p>
@@ -62,13 +62,43 @@ export default function AboutMe({ onClose }: AboutMeProps) {
                             </div>
                             {/* Job what we looking for*/}
                             <div className="w-1/3 justify-center items-center">
-                                <hr className="w-9/10 mx-auto border-2 border-dashed border-slate-300"/>
+                                <hr className="w-9/10 mx-auto border-t-2 border-dashed border-slate-300"/>
                                 <div className="w-9/10 mx-auto pt-3">
                                     <p className="baloo-2Font dynamicSize text-gray-600" style={{"--font-weight": "500", "--font-size": "1.2rem"}}>Looking For</p>
                                     <p className="baloo-2Font dynamicSize" style={{"--font-weight": "600" ,"--font-size":"1.2rem"}}>Software Development from 2027</p>
                                 </div>
                             </div>
                         </div>
+                        {/* Experience Section */}
+                        <div className="flex flex-col justify-center items=center">
+                            <div className="flex flex-row items-center gap-3">
+                                <img src="/suits/diamond.png" alt="Diamond suit" width={24} height={24}/>
+                                <p className="GlutenFont dynamicSize" style={{"--font-weight": "700", "--font-size": "2rem"}}>Experience</p>
+                            </div>
+                            <hr className="border-t-2 border-dashed w-9/10 border-slate-300 mx-auto"/>
+                            <div className="flex flex-row pt-3 pb-3">
+                                <div className="w-3/10 baloo-2Font flex justify-center items-cente">
+                                    <p className="baloo-2Font dynamicSize" style={{"--font-weight": "500", "--font-size": "1.2rem"}}>
+                                        3/2025 - Current
+                                    </p>
+                                </div>
+                                <div className="w-7/10 baloo-2Font">
+                                    {/* Role within company */}
+                                    <div className="baloo-2Font dynamicSize" style={{"--font-weight": "500", "--font-size": "1.2rem"}}>
+                                        <p>
+                                            Retail Assistant, Coles Group Lmtd  
+                                        </p>
+                                    </div>
+                                    <div className="baloo-2Font dynamicSize text-gray-600">
+                                        <p>
+                                            Collected trolleys and cleaned the store    using commercial cleaning chemicals. Planned each shift around areas I could only reach at set times, handled spills and other urgent jobs as they came up, and helped customers every day.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr className="border-t-2 border-dashed w-9/10 border-slate-300 mx-auto"/>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
