@@ -7,11 +7,11 @@ type AboutMeProps = {
 export default function AboutMe({ onClose }: AboutMeProps) {
     return (
         <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60"
+            className="fixed inset-0 z-50 flex justify-center overflow-y-auto bg-black/60 p-4 sm:p-10"
             onClick={onClose}
         >
             <div
-                className="relative w-full max-w-4xl rounded-2xl bg-white p-8 text-black"
+                className="relative w-full max-w-4xl my-auto h-fit rounded-2xl bg-white p-8 text-black"
                 onClick={(e) => e.stopPropagation()}
             >
                 <div className="border-2 border-dashed border-slate-300 rounded-xl p-6">
@@ -77,7 +77,7 @@ export default function AboutMe({ onClose }: AboutMeProps) {
                             </div>
                             <hr className="border-t-2 border-dashed w-9/10 border-slate-300 mx-auto"/>
                             <div className="flex flex-row pt-3 pb-3">
-                                <div className="w-3/10 baloo-2Font flex justify-center items-cente">
+                                <div className="w-3/10 baloo-2Font flex pl-10 items-cente">
                                     <p className="baloo-2Font dynamicSize" style={{"--font-weight": "500", "--font-size": "1.2rem"}}>
                                         3/2025 - Current
                                     </p>
@@ -98,7 +98,35 @@ export default function AboutMe({ onClose }: AboutMeProps) {
                             </div>
                             <hr className="border-t-2 border-dashed w-9/10 border-slate-300 mx-auto"/>
                         </div>
-                        
+                        {/* Education */}
+                        <div>
+                            <div className="flex flex-row items-center gap-3">
+                                <img src="/suits/club.png" alt="Diamond suit" width={24} height={24}/>
+                                <p className="GlutenFont dynamicSize pt-5" style={{"--font-weight": "700", "--font-size": "2rem"}}>Education</p>
+                            </div>
+                            <hr className="border-t-2 border-dashed w-9/10 border-slate-300 mx-auto"/>
+                            <div className="flex flex-row pt-3 pb-3">
+                                <div className="w-3/10 baloo-2Font flex pl-10 items-cente">
+                                    <p className="baloo-2Font dynamicSize" style={{"--font-weight": "500", "--font-size": "1.2rem"}}>
+                                        2024 - 2027
+                                    </p>
+                                </div>
+                                <div className="w-7/10 baloo-2Font">
+                                    {/* Role within company */}
+                                    <div className="baloo-2Font dynamicSize" style={{"--font-weight": "500", "--font-size": "1.2rem"}}>
+                                        <p>
+                                            B.Cs. Computer Science, RMIT Univeristy  
+                                        </p>
+                                    </div>
+                                    <div className="baloo-2Font dynamicSize text-gray-600">
+                                        <p>
+                                            Relevant Courses: Data Structure, Algorithm, Software Engineering Fundamentals and Game Development.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr className="border-t-2 border-dashed w-9/10 border-slate-300 mx-auto"/>
+                        </div>
                     </div>
                 </div>
             </div>
