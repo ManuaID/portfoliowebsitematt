@@ -14,7 +14,11 @@ export default function AboutMe({ onClose }: AboutMeProps) {
                 className="relative w-full max-w-4xl my-auto h-fit rounded-2xl bg-white p-8 text-black"
                 onClick={(e) => e.stopPropagation()}
             >
-                <div className="border-2 border-dashed border-slate-300 rounded-xl p-6">
+                {/* Sticky tape on the top edge */}
+                <span aria-hidden="true" className="tape absolute -top-4 left-14 -rotate-3" />
+                <span aria-hidden="true" className="tape absolute -top-4 right-14 rotate-2" />
+
+                <div className="border-2 border-dashed border-slate-300 rounded-xl px-[5%] py-10">
                     <div className="AboutMeModalContainer flex flex-row justify-between items-start">
                         <div className="flex flex-col items-center">
                             <p className="GlutenFont dynamicSize" style={{ "--font-size": "3rem" }}>10</p>
@@ -32,7 +36,7 @@ export default function AboutMe({ onClose }: AboutMeProps) {
                         </div>
                         <div className="flex flex-row pb-10">
                             {/* Photo of me */}
-                            <div className="w-1/2 flex justify-center items-center pr-14">
+                            <div className="w-1/2 flex items-center pr-10">
                                 {/* Put your photo in public/ and set src, e.g. src="/me.jpg" */}
                                 <img src={undefined} alt="Photo of Matthew" className="pictureIcon"/>
                             </div>
@@ -43,46 +47,46 @@ export default function AboutMe({ onClose }: AboutMeProps) {
                             </div>
                         </div>
                         {/* Personal info */}
-                        <div className="flex flex-row">
+                        <div className="grid grid-cols-3 gap-6 pb-10">
                             {/* Based in */}
-                            <div className="w-1/3 justify-center items-center">
-                                <hr className="w-9/10 mx-auto border-t-2 border-dashed border-slate-300"/>
-                                <div className="w-9/10 mx-auto flex flex-col pt-3">
+                            <div>
+                                <hr className="w-full border-t-2 border-dashed border-slate-300"/>
+                                <div className="flex flex-col pt-3">
                                     <p className="baloo-2Font dynamicSize text-gray-600" style={{"--font-weight": "500", "--font-size": "1.2rem"}}>Based in</p>
                                     <p className="baloo-2Font dynamicSize" style={{"--font-weight": "600" ,"--font-size":"1.2rem"}}>Melbourne, Australia</p>
                                 </div>
                             </div>
                             {/* Languages */}
-                            <div className="w-1/3 justify-center items-center">
-                                <hr className="w-9/10 mx-auto border-t-2 border-dashed border-slate-300"/>
-                                <div className="w-9/10 mx-auto pt-3">
+                            <div>
+                                <hr className="w-full border-t-2 border-dashed border-slate-300"/>
+                                <div className="pt-3">
                                     <p className="baloo-2Font dynamicSize text-gray-600" style={{"--font-weight": "500", "--font-size": "1.2rem"}}>Languages</p>
                                     <p className="baloo-2Font dynamicSize" style={{"--font-weight": "600" ,"--font-size":"1.2rem"}}>English, Japanese</p>
                                 </div>
                             </div>
                             {/* Job what we looking for*/}
-                            <div className="w-1/3 justify-center items-center">
-                                <hr className="w-9/10 mx-auto border-t-2 border-dashed border-slate-300"/>
-                                <div className="w-9/10 mx-auto pt-3">
+                            <div>
+                                <hr className="w-full border-t-2 border-dashed border-slate-300"/>
+                                <div className="pt-3">
                                     <p className="baloo-2Font dynamicSize text-gray-600" style={{"--font-weight": "500", "--font-size": "1.2rem"}}>Looking For</p>
                                     <p className="baloo-2Font dynamicSize" style={{"--font-weight": "600" ,"--font-size":"1.2rem"}}>Software Development from 2027</p>
                                 </div>
                             </div>
                         </div>
                         {/* Experience Section */}
-                        <div className="flex flex-col justify-center items=center">
-                            <div className="flex flex-row items-center gap-3">
+                        <div className="flex flex-col pt-5">
+                            <div className="flex flex-row items-center gap-3 pb-2">
                                 <img src="/suits/diamond.png" alt="Diamond suit" width={24} height={24}/>
                                 <p className="GlutenFont dynamicSize" style={{"--font-weight": "700", "--font-size": "2rem"}}>Experience</p>
                             </div>
-                            <hr className="border-t-2 border-dashed w-9/10 border-slate-300 mx-auto"/>
+                            <hr className="w-full border-t-2 border-dashed border-slate-300"/>
                             <div className="flex flex-row pt-3 pb-3">
-                                <div className="w-3/10 baloo-2Font flex pl-10 items-cente">
+                                <div className="w-3/10 shrink-0 pr-6">
                                     <p className="baloo-2Font dynamicSize" style={{"--font-weight": "500", "--font-size": "1.2rem"}}>
                                         3/2025 - Current
                                     </p>
                                 </div>
-                                <div className="w-7/10 baloo-2Font">
+                                <div className="w-7/10">
                                     {/* Role within company */}
                                     <div className="baloo-2Font dynamicSize" style={{"--font-weight": "500", "--font-size": "1.2rem"}}>
                                         <p>
@@ -96,22 +100,22 @@ export default function AboutMe({ onClose }: AboutMeProps) {
                                     </div>
                                 </div>
                             </div>
-                            <hr className="border-t-2 border-dashed w-9/10 border-slate-300 mx-auto"/>
+                            <hr className="w-full border-t-2 border-dashed border-slate-300"/>
                         </div>
                         {/* Education */}
                         <div>
-                            <div className="flex flex-row items-center gap-3">
+                            <div className="flex flex-row items-center gap-3 pt-10 pb-2">
                                 <img src="/suits/club.png" alt="Diamond suit" width={24} height={24}/>
-                                <p className="GlutenFont dynamicSize pt-5" style={{"--font-weight": "700", "--font-size": "2rem"}}>Education</p>
+                                <p className="GlutenFont dynamicSize" style={{"--font-weight": "700", "--font-size": "2rem"}}>Education</p>
                             </div>
-                            <hr className="border-t-2 border-dashed w-9/10 border-slate-300 mx-auto"/>
+                            <hr className="w-full border-t-2 border-dashed border-slate-300"/>
                             <div className="flex flex-row pt-3 pb-3">
-                                <div className="w-3/10 baloo-2Font flex pl-10 items-cente">
+                                <div className="w-3/10 shrink-0 pr-6">
                                     <p className="baloo-2Font dynamicSize" style={{"--font-weight": "500", "--font-size": "1.2rem"}}>
                                         2024 - 2027
                                     </p>
                                 </div>
-                                <div className="w-7/10 baloo-2Font">
+                                <div className="w-7/10">
                                     {/* Role within company */}
                                     <div className="baloo-2Font dynamicSize" style={{"--font-weight": "500", "--font-size": "1.2rem"}}>
                                         <p>
@@ -125,7 +129,91 @@ export default function AboutMe({ onClose }: AboutMeProps) {
                                     </div>
                                 </div>
                             </div>
-                            <hr className="border-t-2 border-dashed w-9/10 border-slate-300 mx-auto"/>
+                            <hr className="w-full border-t-2 border-dashed border-slate-300"/>
+                        </div>
+
+                        {/* Skills */}
+                        <div className="flex flex-col pt-5">
+                            <div className="flex flex-row items-center gap-3 pb-2">
+                                <img src="/suits/heart.png" alt="Diamond suit" width={24} height={24}/>
+                                <p className="GlutenFont dynamicSize" style={{"--font-weight": "700", "--font-size": "2rem"}}>Skills</p>
+                            </div>
+                            {/* Languages */}
+                            <div className="flex flex-col flex-wrap gap-3">
+                                {/* Each skills that i have */}
+                                <p className="baloo-2Font dynamicSize" style={{"--font-weight": "600", "--font-size": "1.1rem"}}>Languages</p>
+                                <div className="flex flex-row flex-wrap gap-5">
+
+                                    <div className="skillBanner inline-flex -rotate-1 items-center gap-2.5 rounded-xl border-2 border-[#2b1d16] bg-white py-1.5 pr-3.5 pl-1.5 text-[#2b1d16] shadow-[3px_3px_0_rgba(43,29,22,0.32)] w-fit">
+                                        <div
+                                            aria-hidden="true"
+                                            className="skillIcon GlutenFont dynamicSize grid size-8 place-items-center rounded-lg border-2 border-[#2b1d16] bg-black text-white"
+                                            style={{"--font-weight": "700", "--font-size": "13px"}}
+                                        >
+                                            Py
+                                        </div>
+                                        <p className="baloo-2Font dynamicSize" style={{"--font-weight": "700", "--font-size": "17px"}}>Python</p>
+                                    </div>
+                                    <div className="skillBanner inline-flex -rotate-1 items-center gap-2.5 rounded-xl border-2 border-[#2b1d16] bg-white py-1.5 pr-3.5 pl-1.5 text-[#2b1d16] shadow-[3px_3px_0_rgba(43,29,22,0.32)] w-fit">
+                                        <div
+                                            aria-hidden="true"
+                                            className="skillIcon GlutenFont dynamicSize grid size-8 place-items-center rounded-lg border-2 border-[#2b1d16] bg-black text-white"
+                                            style={{"--font-weight": "700", "--font-size": "13px"}}
+                                        >
+                                            Jv
+                                        </div>
+                                        <p className="baloo-2Font dynamicSize" style={{"--font-weight": "700", "--font-size": "17px"}}>Java</p>
+                                    </div>
+                                    <div className="skillBanner inline-flex -rotate-1 items-center gap-2.5 rounded-xl border-2 border-[#2b1d16] bg-white py-1.5 pr-3.5 pl-1.5 text-[#2b1d16] shadow-[3px_3px_0_rgba(43,29,22,0.32)] w-fit">
+                                        <div
+                                            aria-hidden="true"
+                                            className="skillIcon GlutenFont dynamicSize grid size-8 place-items-center rounded-lg border-2 border-[#2b1d16] bg-black text-white"
+                                            style={{"--font-weight": "700", "--font-size": "13px"}}
+                                        >
+                                            JS
+                                        </div>
+                                        <p className="baloo-2Font dynamicSize" style={{"--font-weight": "700", "--font-size": "17px"}}>JavaScript</p>
+                                    </div>
+                                    <div className="skillBanner inline-flex -rotate-1 items-center gap-2.5 rounded-xl border-2 border-[#2b1d16] bg-white py-1.5 pr-3.5 pl-1.5 text-[#2b1d16] shadow-[3px_3px_0_rgba(43,29,22,0.32)] w-fit">
+                                        <div
+                                            aria-hidden="true"
+                                            className="skillIcon GlutenFont dynamicSize grid size-8 place-items-center rounded-lg border-2 border-[#2b1d16] bg-black text-white"
+                                            style={{"--font-weight": "700", "--font-size": "13px"}}
+                                        >
+                                            CP
+                                        </div>
+                                        <p className="baloo-2Font dynamicSize" style={{"--font-weight": "700", "--font-size": "17px"}}>C++</p>
+                                    </div>
+                                    <div className="skillBanner inline-flex -rotate-1 items-center gap-2.5 rounded-xl border-2 border-[#2b1d16] bg-white py-1.5 pr-3.5 pl-1.5 text-[#2b1d16] shadow-[3px_3px_0_rgba(43,29,22,0.32)] w-fit">
+                                        <div
+                                            aria-hidden="true"
+                                            className="skillIcon GlutenFont dynamicSize grid size-8 place-items-center rounded-lg border-2 border-[#2b1d16] bg-black text-white"
+                                            style={{"--font-weight": "700", "--font-size": "13px"}}
+                                        >
+                                            CS
+                                        </div>
+                                        <p className="baloo-2Font dynamicSize" style={{"--font-weight": "700", "--font-size": "17px"}}>C#</p>
+                                    </div>
+                                    <div className="skillBanner inline-flex -rotate-1 items-center gap-2.5 rounded-xl border-2 border-[#2b1d16] bg-white py-1.5 pr-3.5 pl-1.5 text-[#2b1d16] shadow-[3px_3px_0_rgba(43,29,22,0.32)] w-fit">
+                                        <div
+                                            aria-hidden="true"
+                                            className="skillIcon GlutenFont dynamicSize grid size-8 place-items-center rounded-lg border-2 border-[#2b1d16] bg-black text-white"
+                                            style={{"--font-weight": "700", "--font-size": "13px"}}
+                                        >
+                                            AY
+                                        </div>
+                                        <p className="baloo-2Font dynamicSize" style={{"--font-weight": "700", "--font-size": "17px"}}>Assembly (LC3)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* FrameWork */}
+                            <div>
+                                
+                            </div>
+                            {/* Tools */}
+                            <div>
+
+                            </div>
                         </div>
                     </div>
                 </div>

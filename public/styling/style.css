@@ -56,3 +56,26 @@
     height: 15rem;
     width: 15rem;
 }
+
+.skillIcon {
+    border-radius: 10pt;
+}
+
+.skillBanner {
+    border-radius: 10pt;
+}
+/* Strip of masking tape stuck over the top edge of a card */
+.tape {
+    width: 8rem;
+    height: 2.25rem;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0) 40%),
+        rgba(236, 190, 80, 0.8);
+    /* Jagged torn ends on the left and right */
+    clip-path: polygon(
+        3% 0, 97% 0, 100% 15%, 97% 30%, 100% 50%, 97% 70%, 100% 85%, 97% 100%,
+        3% 100%, 0 85%, 3% 70%, 0 50%, 3% 30%, 0 15%
+    );
+    pointer-events: none;
+    z-index: 1;
+}
