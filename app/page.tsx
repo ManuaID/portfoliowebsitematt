@@ -2,9 +2,10 @@
 import Image from "next/image";
 import { useState } from "react";
 import AboutMe from "@/app/components/AboutMe";
+import ProjectModal from "@/app/components/Projects"
 
 export default function Home() {
-  const [openState, setOpenState] = useState(false);
+  const [openModal, setOpenModal] = useState<"about" | "projects" | null>(null);
 
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
@@ -59,8 +60,14 @@ export default function Home() {
             />
             Deploy Now
           </a>
-          <button onClick={()=>setOpenState(true)} className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]">About me</button>
-          {openState && <AboutMe onClose={()=>setOpenState(false)} />}
+          {/* About Me Modal */}
+          <button onClick={()=>setOpenModal("about")} className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]">About me</button>
+          {openModal === "about" && <AboutMe onClose={()=>setOpenModal(null)} />}
+
+          {/* Project Modal */}
+          <button onClick={()=>setOpenModal("projects")} className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]">Projects</button>
+          {openModal === "projects" && <ProjectModal onClose={()=>setOpenModal(null)} />}
+
         </div>
       </main>
     </div>

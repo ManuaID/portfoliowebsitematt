@@ -1,0 +1,38 @@
+[
+    {
+        "skillCategory": "Language",
+        "iconColor": "#000000",
+        "skills": [
+            { "skillIconAcro": "Py", "skillName": "Python" },
+            { "skillIconAcro": "Jv", "skillName": "Java" },
+            { "skillIconAcro": "JS", "skillName": "JavaScript" },
+            { "skillIconAcro": "CP", "skillName": "C++" },
+            { "skillIconAcro": "CS", "skillName": "C#" },
+            { "skillIconAcro": "AY", "skillName": "Assembly (LC3)" },
+            { "skillIconAcro": "SW", "skillName": "Swift" }
+        ]
+    },
+    {
+        "skillCategory": "Framework",
+        "iconColor": "#008000",
+        "skills": [
+            { "skillIconAcro": "Re", "skillName": "React" },
+            { "skillIconAcro": "Nx", "skillName": "Next.js" },
+            { "skillIconAcro": "3J", "skillName": "three.js" },
+            { "skillIconAcro": "U", "skillName": "Unity" },
+            { "skillIconAcro": "PT", "skillName": "PyTorch" }
+        ]
+    },
+    {
+        "skillCategory": "Tools",
+        "iconColor": "#FF2400",
+        "skills": [
+            { "skillIconAcro": "Gt", "skillName": "Git" },
+            { "skillIconAcro": "Lx", "skillName": "Linux" },
+            { "skillIconAcro": "M", "skillName": "Microsoft 365" },
+            { "skillIconAcro": "G", "skillName": "G Suite" },
+            { "skillIconAcro": "IJ", "skillName": "IntelliJ" },
+            { "skillIconAcro": "AI", "skillName": "AI" }
+        ]
+    }
+]

@@ -1,4 +1,5 @@
 import '@/public/styling/style.css'
+import skillCategories from '@/public/Skills.json'
 
 type AboutMeProps = {
     onClose: () => void
@@ -21,12 +22,12 @@ export default function AboutMe({ onClose }: AboutMeProps) {
                 <div className="border-2 border-dashed border-slate-300 rounded-xl px-[5%] py-10">
                     <div className="AboutMeModalContainer flex flex-row justify-between items-start">
                         <div className="flex flex-col items-center">
-                            <p className="GlutenFont dynamicSize" style={{ "--font-size": "3rem" }}>10</p>
-                            <img src="/suits/spade.png" alt="Spade" width={48} height={48}/>
+                            <p className="GlutenFont dynamicSize" style={{ "--font-size": "2rem" }}>10</p>
+                            <img src="/suits/spade.png" alt="Spade" width={32} height={32}/>
                         </div>
-                        <div className="goBackbutton flex flex-row items-center border-black border-t-2 border-l-2 border-r-5 border-b-5">
+                        <div className="goBackbutton flex flex-row items-center border-black border-t-2 border-l-2 border-r-5 border-b-5" onClick={onClose}>
                             <img src="/arrow.png" alt="LeftArrow" width={10} height={10}/>
-                            <p className="baloo-2Font">Back to the table</p>
+                            <p className="baloo-2Font" style={{"--font-weight": "600"}}>Back to the table</p>
                         </div>
                     </div>
                     {/* Profile container */}
@@ -135,89 +136,49 @@ export default function AboutMe({ onClose }: AboutMeProps) {
                         {/* Skills */}
                         <div className="flex flex-col pt-5">
                             <div className="flex flex-row items-center gap-3 pb-2">
-                                <img src="/suits/heart.png" alt="Diamond suit" width={24} height={24}/>
+                                <img src="/suits/heart.png" alt="Heart suit" width={24} height={24}/>
                                 <p className="GlutenFont dynamicSize" style={{"--font-weight": "700", "--font-size": "2rem"}}>Skills</p>
                             </div>
-                            {/* Languages */}
-                            <div className="flex flex-col flex-wrap gap-3">
-                                {/* Each skills that i have */}
-                                <p className="baloo-2Font dynamicSize" style={{"--font-weight": "600", "--font-size": "1.1rem"}}>Languages</p>
-                                <div className="flex flex-row flex-wrap gap-5">
-
-                                    <div className="skillBanner inline-flex -rotate-1 items-center gap-2.5 rounded-xl border-2 border-[#2b1d16] bg-white py-1.5 pr-3.5 pl-1.5 text-[#2b1d16] shadow-[3px_3px_0_rgba(43,29,22,0.32)] w-fit">
-                                        <div
-                                            aria-hidden="true"
-                                            className="skillIcon GlutenFont dynamicSize grid size-8 place-items-center rounded-lg border-2 border-[#2b1d16] bg-black text-white"
-                                            style={{"--font-weight": "700", "--font-size": "13px"}}
-                                        >
-                                            Py
-                                        </div>
-                                        <p className="baloo-2Font dynamicSize" style={{"--font-weight": "700", "--font-size": "17px"}}>Python</p>
-                                    </div>
-                                    <div className="skillBanner inline-flex -rotate-1 items-center gap-2.5 rounded-xl border-2 border-[#2b1d16] bg-white py-1.5 pr-3.5 pl-1.5 text-[#2b1d16] shadow-[3px_3px_0_rgba(43,29,22,0.32)] w-fit">
-                                        <div
-                                            aria-hidden="true"
-                                            className="skillIcon GlutenFont dynamicSize grid size-8 place-items-center rounded-lg border-2 border-[#2b1d16] bg-black text-white"
-                                            style={{"--font-weight": "700", "--font-size": "13px"}}
-                                        >
-                                            Jv
-                                        </div>
-                                        <p className="baloo-2Font dynamicSize" style={{"--font-weight": "700", "--font-size": "17px"}}>Java</p>
-                                    </div>
-                                    <div className="skillBanner inline-flex -rotate-1 items-center gap-2.5 rounded-xl border-2 border-[#2b1d16] bg-white py-1.5 pr-3.5 pl-1.5 text-[#2b1d16] shadow-[3px_3px_0_rgba(43,29,22,0.32)] w-fit">
-                                        <div
-                                            aria-hidden="true"
-                                            className="skillIcon GlutenFont dynamicSize grid size-8 place-items-center rounded-lg border-2 border-[#2b1d16] bg-black text-white"
-                                            style={{"--font-weight": "700", "--font-size": "13px"}}
-                                        >
-                                            JS
-                                        </div>
-                                        <p className="baloo-2Font dynamicSize" style={{"--font-weight": "700", "--font-size": "17px"}}>JavaScript</p>
-                                    </div>
-                                    <div className="skillBanner inline-flex -rotate-1 items-center gap-2.5 rounded-xl border-2 border-[#2b1d16] bg-white py-1.5 pr-3.5 pl-1.5 text-[#2b1d16] shadow-[3px_3px_0_rgba(43,29,22,0.32)] w-fit">
-                                        <div
-                                            aria-hidden="true"
-                                            className="skillIcon GlutenFont dynamicSize grid size-8 place-items-center rounded-lg border-2 border-[#2b1d16] bg-black text-white"
-                                            style={{"--font-weight": "700", "--font-size": "13px"}}
-                                        >
-                                            CP
-                                        </div>
-                                        <p className="baloo-2Font dynamicSize" style={{"--font-weight": "700", "--font-size": "17px"}}>C++</p>
-                                    </div>
-                                    <div className="skillBanner inline-flex -rotate-1 items-center gap-2.5 rounded-xl border-2 border-[#2b1d16] bg-white py-1.5 pr-3.5 pl-1.5 text-[#2b1d16] shadow-[3px_3px_0_rgba(43,29,22,0.32)] w-fit">
-                                        <div
-                                            aria-hidden="true"
-                                            className="skillIcon GlutenFont dynamicSize grid size-8 place-items-center rounded-lg border-2 border-[#2b1d16] bg-black text-white"
-                                            style={{"--font-weight": "700", "--font-size": "13px"}}
-                                        >
-                                            CS
-                                        </div>
-                                        <p className="baloo-2Font dynamicSize" style={{"--font-weight": "700", "--font-size": "17px"}}>C#</p>
-                                    </div>
-                                    <div className="skillBanner inline-flex -rotate-1 items-center gap-2.5 rounded-xl border-2 border-[#2b1d16] bg-white py-1.5 pr-3.5 pl-1.5 text-[#2b1d16] shadow-[3px_3px_0_rgba(43,29,22,0.32)] w-fit">
-                                        <div
-                                            aria-hidden="true"
-                                            className="skillIcon GlutenFont dynamicSize grid size-8 place-items-center rounded-lg border-2 border-[#2b1d16] bg-black text-white"
-                                            style={{"--font-weight": "700", "--font-size": "13px"}}
-                                        >
-                                            AY
-                                        </div>
-                                        <p className="baloo-2Font dynamicSize" style={{"--font-weight": "700", "--font-size": "17px"}}>Assembly (LC3)</p>
+                            {/* One block per category in public/Skills.json */}
+                            {skillCategories.map((category, i) => (
+                                <div key={category.skillCategory} className={`flex flex-col gap-3 ${i > 0 ? "pt-5" : ""}`}>
+                                    <p className="baloo-2Font dynamicSize" style={{"--font-weight": "600", "--font-size": "1.1rem"}}>{category.skillCategory}</p>
+                                    <div className="flex flex-row flex-wrap gap-5">
+                                        {category.skills.map((skill) => (
+                                            <SkillCard key={skill.skillName} skill={skill} iconColor={category.iconColor}/>
+                                        ))}
                                     </div>
                                 </div>
-                            </div>
-                            {/* FrameWork */}
-                            <div>
-                                
-                            </div>
-                            {/* Tools */}
-                            <div>
-
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </div>
             </div>
     </div>
+    )
+}
+
+type Skill = {
+    skillIconAcro: string
+    skillName: string
+}
+
+type SkillCardProps = {
+    skill: Skill
+    iconColor: string
+}
+
+function SkillCard({ skill, iconColor }: SkillCardProps) {
+    return (
+        <div className="skillBanner inline-flex -rotate-1 items-center gap-2.5 rounded-xl border-2 border-[#2b1d16] bg-white py-1.5 pr-3.5 pl-1.5 text-[#2b1d16] shadow-[3px_3px_0_rgba(43,29,22,0.32)] w-fit">
+            <div
+                aria-hidden="true"
+                className="skillIcon GlutenFont dynamicSize grid size-8 place-items-center rounded-lg border-2 border-[#2b1d16] text-white"
+                style={{"--font-weight": "700", "--font-size": "13px", backgroundColor: iconColor}}
+            >
+                {skill.skillIconAcro}
+            </div>
+            <p className="baloo-2Font dynamicSize" style={{"--font-weight": "700", "--font-size": "17px"}}>{skill.skillName}</p>
+        </div>
     )
 }
