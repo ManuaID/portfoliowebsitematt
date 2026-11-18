@@ -1,3 +1,5 @@
+import bestProjectHero from "./BestProjectHero"
+
 type ProjectProps = {
     onClose: () => void;
 }
@@ -29,9 +31,7 @@ export default function ProjectModal({ onClose }: ProjectProps) {
                     </div>
                     <p className="GlutenFont dynamicSize" style={{"--font-weight": "800", "--font-size": "3.5rem"}}>Projects</p>
                     <p className="baloo-2Font text-gray-500 dynamicSize" style={{"--font-size": "1.5rem"}}>Things I've built, starting with my best hand</p>
-                    <div className="border-1 border-black h-fit">
-
-                    </div>
+                    <bestProjectHero></bestProjectHero>
                 </div>
 
             </div>
